@@ -1,0 +1,68 @@
+public class UC6 {
+
+    public static void main(String[] args) {
+
+        // Build banner using helper methods
+        String[] banner = {
+                buildLine(0),
+                buildLine(1),
+                buildLine(2),
+                buildLine(3),
+                buildLine(4),
+                buildLine(5)
+        };
+
+        // Print banner
+        for (String line : banner) {
+            System.out.println(line);
+        }
+    }
+
+    // Method to construct each full line of "OOPS"
+    public static String buildLine(int row) {
+        return String.join("   ",
+                getO(row),
+                getO(row),
+                getP(row),
+                getS(row)
+        );
+    }
+
+    // Pattern for 'O'
+    public static String getO(int row) {
+        switch (row) {
+            case 0:
+            case 5:
+                return "**";
+            default:
+                return "*";
+        }
+    }
+
+    // Pattern for 'P'
+    public static String getP(int row) {
+        switch (row) {
+            case 0:
+            case 2:
+                return "**";
+            case 5:
+                return "*";
+            default:
+                return "*";
+        }
+    }
+
+    // Pattern for 'S'
+    public static String getS(int row) {
+        switch (row) {
+            case 0:
+            case 2:
+            case 5:
+                return "**";
+            case 3:
+                return "  **";
+            default:
+                return "*";
+        }
+    }
+}

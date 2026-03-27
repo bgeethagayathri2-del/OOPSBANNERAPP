@@ -1,0 +1,38 @@
+public class UC4 {
+    public static void main(String[] args) {
+
+        // Store all banner lines in an array
+        String[] banner = {
+                String.join("   ", "**", "**", "**", "**"),
+
+                String.join("   ",
+                        "*", "*", "*", "*",
+                        "*", "*", "*", "*"
+                ),
+
+                String.join("   ",
+                        "*", "*", "*", "*",
+                        "**", "**"
+                ),
+
+                String.join("   ",
+                        "*", "*", "*", "*",
+                        "*", "  **"
+                ),
+
+                String.join("   ",
+                        "*", "*", "*", "*",
+                        "*", "*", "*"
+                ),
+
+                String.join("   ",
+                        "**", "**", "*", "***"
+                )
+        };
+
+        // Print using loop (Enhanced for-loop)
+        for (String line : banner) {
+            System.out.println(line);
+        }
+    }
+}
